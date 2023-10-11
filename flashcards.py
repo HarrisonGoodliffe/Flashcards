@@ -6,39 +6,18 @@ import random
 
 class flashcards:
     def __init__(self):
-        self.engine = {
+        self.parts = {
                         "ENGINE":"An engine or motor is a machine designed to convert one form of energy into mechanical energy.",
-                        "GARETH":"GARETH"
-                        
-                        }
-        self.gearbox = {
                         "GEARBOX":"A gearbox is a mechanical device utilized to increase the output torque or change the speed (RPM) of a motor.",
-                        "GARETH":"GARETH"
-                        }
-        self.brakes = {
                         "BRAKES":"A brake is a mechanical device that inhibits motion by absorbing energy from a moving system.",
-                        "GARETH":"GARETH"
-                        }
-        self.steering = {
                         "STEERING":"Steering is the collection of components, linkages, etc. which allows any vehicle (car, motorcycle, bicycle) to follow the desired course.",
-                        "GARETH":"GARETH"
-                        }
-        self.suspension = {
                         "SUSPENSION":"Suspension is the system of tires, tire air, springs, shock absorbers and linkages that connects a vehicle to its wheels and allows relative motion between the two.",
-                        "GARETH":"GARETH"
-                        }
-        self.wheels = {
                         "WHEELS":"A wheel is a circular component that is intended to rotate on an axle bearing.",
-                        "GARETH":"GARETH"
-                        }
-        self.tyres = {
                         "TYRES":"A tire is a ring-shaped covering that fits around a wheel's rim to protect it and enable better vehicle performance.",
-                        "GARETH":"GARETH"
-                        }
-        self.exhaust = {
                         "EXHAUST":"An exhaust system is usually piping used to guide reaction exhaust gases away from a controlled combustion inside an engine.",
-                        "GARETH":"GARETH"
-                        }  
+
+                        }
+        
     
 
 
@@ -47,35 +26,34 @@ info=flashcards()
 
 def button_click_engine():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.engine.items())))
+    mainbox.insert(END, info.parts["ENGINE"])
 
 def button_click_gearbox():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.gearbox.items())))
+    mainbox.insert(END, info.parts["GEARBOX"])
 
 def button_click_brakes():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.brakes.items())))
+    mainbox.insert(END, info.parts["BRAKES"])
 
 def button_click_steering():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.steering.items())))
+    mainbox.insert(END, info.parts["STEERING"])
 
 def button_click_suspension():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.suspension.items())))
+    mainbox.insert(END, info.parts["SUSPENSION"])
 
 def button_click_wheels():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.wheels.items())))
-
+    mainbox.insert(END, info.parts["WHEELS"])
 def button_click_tyres():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.tyres.items())))
+    mainbox.insert(END, info.parts["TYRES"])
 
 def button_click_exhaust():
     mainbox.delete(0.0,END)
-    mainbox.insert(END, random.choice(list(info.exhaust.items())))
+    mainbox.insert(END, info.parts["EXHAUST"])
 
       
 
@@ -132,8 +110,6 @@ exhaust_button = Button(window, text="exhaust", width=5, command=button_click_ex
 exhaust_button.grid(row=19, column=1, sticky=W)
 exhaust_button.tag = ("exhaust")
 exhaust_button.place(x=20, y=720, width=100, height=100)
-
-
 
 
 #create the text box to display info
